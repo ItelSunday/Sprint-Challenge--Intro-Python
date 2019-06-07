@@ -40,7 +40,7 @@ c = [human.name for human in humans if human.name[0] >= "C" and human.name[0]  <
 # Cathy
 # Brian  Yannie 
 # Edd    Jack
-# c <= g != 
+# c <= g  
 # logical operators
 # ascii
 
