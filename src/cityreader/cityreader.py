@@ -6,11 +6,11 @@ class City:
 # instance attribute
   def __init__(self, name, latitude, longitude):
     self.name = name
-    self.latitude = latitude
-    self.longitude = longitude
+    self.lat = latitude
+    self.lon = longitude
   
   def __repr__(self):
-    return f"{self.name} ({self.latitude}, {self.longitude})"
+    return f"{self.name} ({self.lat}, {self.lon})"
 
 # We have a collection of US cities with population over 750,000 stored in the
 # file "cities.csv". (CSV stands for "comma-separated values".)
@@ -33,7 +33,8 @@ def cityreader(cities=[]):
   with open("cities.csv", newline="") as csv_file:
     reader = csv.DictReader(csv_file)
     for row in reader:
-      cities.append(City(row["city"], row["lat"], row["lng"]))
+      #print(type(row["city"],(row["lat"]), float(row["lng"]))
+      cities.append(City(row["city"], float(row["lat"]), float(row["lng"])))
         
     return cities
 
